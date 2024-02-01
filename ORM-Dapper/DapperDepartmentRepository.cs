@@ -26,12 +26,7 @@ namespace ORM_Dapper
         public void InsertDepartment(string newDepartmentName)
         {
             _connection.Execute("INSERT INTO DEPARTMENTS (Name) VALUES (@departmentName);",
-     new { departmentName = newDepartmentName });
-        }
-
-        public void InsertDepartment()
-        {
-            throw new NotImplementedException();
+            new { departmentName = newDepartmentName });
         }
     }
 }
